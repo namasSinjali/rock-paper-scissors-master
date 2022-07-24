@@ -1,10 +1,17 @@
 <script lang="ts">
 	import { score } from '$lib/store';
-	export let logoSrc: string;
+	export let nOfSymbols: 3 | 5;
+	$: logoSrc = nOfSymbols === 3 ? 'images/logo.svg' : 'images/logo-bonus.svg';
 </script>
 
 <div class="header">
-	<img src={logoSrc} alt="logo" />
+	<img
+		style:height={nOfSymbols === 3 ? '70%' : '100%'}
+		src={logoSrc}
+		alt="logo"
+		title="Change Mode"
+		on:click
+	/>
 	<div class="score-board">
 		<span class="label">score</span>
 		<span class="score">{$score}</span>
@@ -20,18 +27,21 @@
 		padding: 10px 10px 10px 20px;
 		border: 2px solid hsl(217, 16%, 45%);
 		border-radius: 7px;
+		min-width: 200px;
 	}
 	img {
-		height: 70%;
+		height: 100%;
 		object-fit: contain;
+		cursor: pointer;
 	}
 
 	.score-board {
 		align-self: stretch;
 		display: flex;
+		justify-content: center;
 		min-width: 70px;
 		flex-flow: column nowrap;
-		padding: 10px 5px 0 5px;
+		padding: 10px 5px;
 		align-items: center;
 		background-color: white;
 		border-radius: 5px;
@@ -47,5 +57,21 @@
 		color: hsl(229, 25%, 31%);
 		font-size: 40px;
 		font-weight: 700;
+		line-height: 1;
+	}
+	@media (min-height: 500px) and (min-width: 800px) {
+		.header {
+			height: 150px;
+			padding: 20px 20px 20px 30px;
+		}
+		.score-board {
+			padding: 10px 30px;
+		}
+		.score {
+			font-size: 60px;
+		}
+		.label {
+			font-size: 15px;
+		}
 	}
 </style>

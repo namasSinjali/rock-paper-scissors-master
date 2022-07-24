@@ -1,4 +1,5 @@
 <script lang="ts">
+	// import { send, receive } from '$lib/store';
 	type LogoData = {
 		[index in Symbols]: { src: string; gradientFrom: string; gradientTo: string; shadow: string };
 	};
@@ -20,6 +21,18 @@
 			gradientFrom: 'hsl(349, 71%, 52%)',
 			gradientTo: 'hsl(349, 70%, 56%)',
 			shadow: 'hsl(347, 74%, 36%)'
+		},
+		lizard: {
+			src: 'images/icon-lizard.svg',
+			gradientFrom: 'hsl(261, 73%, 60%)',
+			gradientTo: 'hsl(261, 72%, 63%)',
+			shadow: 'hsl(261, 52%, 45%)'
+		},
+		spock: {
+			src: 'images/icon-spock.svg',
+			gradientFrom: 'hsl(189, 59%, 53%)',
+			gradientTo: 'hsl(189, 58%, 57%)',
+			shadow: 'hsl(195, 59%, 43%)'
 		}
 	};
 	export let type: Symbols;
@@ -53,7 +66,6 @@
 		position: relative;
 		display: grid;
 		place-items: center;
-		margin-bottom: var(--offset);
 	}
 	.content {
 		--dim: calc(var(--size) / 1.3);

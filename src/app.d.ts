@@ -9,4 +9,4 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
-type Symbols = 'scissors' | 'paper' | 'rock';
+type Symbols = 'scissors' | 'paper' | 'rock' | 'lizard' | 'spock';

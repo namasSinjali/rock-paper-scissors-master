@@ -24,7 +24,7 @@
 			paper: 1,
 			rock: 2,
 			lizard: 3,
-			spook: 4
+			spock: 4
 		};
 		const diff = VALUE[picks[1]] - VALUE[picks[0]];
 		let win = diff % 2 === 0 ? -1 : 1;
