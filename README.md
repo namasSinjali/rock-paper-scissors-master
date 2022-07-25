@@ -36,7 +36,7 @@ P.S. Game mode can be changed by clicking logo icon.
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/namasSinjali/rock-paper-scissors-master.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://rock-paper-scissors-master-nu.vercel.app/)
 
 ## My process
 
@@ -55,7 +55,7 @@ P.S. Game mode can be changed by clicking logo icon.
 
 In this project, I used typescript for the first time and got to learn it in the process.
 
-While working with svelte transition, I failed couple of times and finally found right way to do it. Moreover, I forced me to dive deeper into docs and learn more how the framework works(implements certain things).
+While working with svelte transition, I failed couple of times before I found the right way to do it. It forced me to dive deeper into docs and learn more how the framework works(implements certain things).
 
 I used basic geometry knowledge to positions those symbol buttons. P.S definitely proud of myself coming with this solution.
 
