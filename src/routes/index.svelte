@@ -165,25 +165,6 @@
 					</div>
 				{/if}
 			</div>
-			<!-- <div class="layer" style:z-index={selection ? 0 : 1}>
-				{#if !selection}
-					<Select
-						on:select={(e) => {
-							selection = e.detail;
-						}}
-					/>
-				{/if}
-			</div>
-			<div class="layer" style:z-index={selection ? 1 : 0}>
-				{#if selection}
-					<Result
-						{selection}
-						on:playAgain={() => {
-							selection = null;
-						}}
-					/>
-				{/if}
-			</div> -->
 		</main>
 	</div>
 	<button
@@ -268,7 +249,6 @@
 		position: relative;
 	}
 	.layer {
-		/* outline: 1px solid red; */
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -336,11 +316,11 @@
 	}
 	.small .layer-select .container {
 		aspect-ratio: 1.1547;
-		background-image: url(images/bg-triangle.svg);
+		background-image: url(/images/bg-triangle.svg);
 	}
 	.large .layer-select .container {
 		aspect-ratio: 1.05146;
-		background-image: url(images/bg-pentagon.svg);
+		background-image: url(/images/bg-pentagon.svg);
 	}
 	.small .layer-select .btn0 {
 		top: 0;
@@ -482,7 +462,6 @@
 			margin-right: 0;
 		}
 		.result.expand {
-			/* grid-template: 'player1 message player2' auto/ 1fr 200px 1fr; */
 			margin-right: -70px;
 			margin-left: -70px;
 			transition: margin-left 0.4s ease-out, margin-right 0.4s ease-out;
